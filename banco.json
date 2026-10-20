@@ -1,25 +1,25 @@
 {
     "investidor": {
-        "id": 1,
-        "nome": "João Silva",
+        "nome": "Joãozinho Criptomaníaco",
         "cpf": "12345678900",
-        "saldo": 0,
+        "saldo": {
+            "bitcoin": 0,
+            "ethereum": 0,
+            "ripple": 0
+        },
         "extratos": []
     },
-
     "moedas": {
         "bitcoin": {
             "taxa_compra": 2,
             "taxa_venda": 3,
             "cotacao": 412000
         },
-
         "ethereum": {
             "taxa_compra": 1,
             "taxa_venda": 2,
             "cotacao": 12000
         },
-
         "ripple": {
             "taxa_compra": 1,
             "taxa_venda": 1,
