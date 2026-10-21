@@ -1,4 +1,5 @@
 import json
+from funcionalidades.login import logar
 
 with open('banco.json', 'r', encoding='utf-8') as file:
     banco = json.load(file)
@@ -10,31 +11,6 @@ while True:
     # ---------------------------------------------------------------------------- #
     #                                     LOGIN                                    #
     # ---------------------------------------------------------------------------- #
-    dados_login = ('12345678900', 'senhasenha')
-
-    entrada_investidor = input('Digite o CPF: ')
-    entrada_senha = input('Digite a senha: ')
-
-    def logar():        
-        if entrada_investidor != dados_login[0]:
-            return print('CPF não encontrado')
-
-        if entrada_senha != dados_login[1]:
-            return print('senha incorreta')
-
-        print('logado com sucesso\n')
-
-        print("""
-        1- consultar saldo
-        2- consultar extrato
-        3- depositar
-        4- sacar
-        5- comprar criptomoedas
-        6- vender criptomoedas
-        7- atualizar cotação
-        8- sair
-        """)
-
     logar()
 
     # ---------------------------------------------------------------------------- #
@@ -45,18 +21,25 @@ while True:
     match entrada_opcao:
         case '1':
             print('consultar saldo')
+            break
         case '2':
             print('consultar extrato')
+            break
         case '3':
             print('depositar')
+            break
         case '4':
             print('sacar')
+            break
         case '5':
             print('comprar criptomoedas')
+            break
         case '6':
             print('vender criptomoedas')
+            break
         case '7':
             print('atualizar cotação')
+            break
         case '8':
             print('sair')
             break
