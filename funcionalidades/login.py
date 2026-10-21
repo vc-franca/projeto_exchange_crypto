@@ -1,4 +1,6 @@
-dados_login = ('12345678900', 'senhasenha')
+from banco import banco
+
+dados_login = (banco['investidor']['cpf'], banco['investidor']['senha'])
 
 entrada_investidor = input('Digite o CPF: ')
 entrada_senha = input('Digite a senha: ')
@@ -10,15 +12,6 @@ def logar():
     if entrada_senha != dados_login[1]:
         return print('senha incorreta')
 
-    print('logado com sucesso\n')
+    print('logado com sucesso!\n')
 
-    print("""
-1- consultar saldo
-2- consultar extrato
-3- depositar
-4- sacar
-5- comprar criptomoedas
-6- vender criptomoedas
-7- atualizar cotação
-8- sair
-    """)
+    return True

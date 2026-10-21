@@ -2,9 +2,11 @@
     "investidor": {
         "nome": "Joãozinho Criptomaníaco",
         "cpf": "12345678900",
+        "senha": "senhasenha",
         "saldo": {
-            "bitcoin": 0,
-            "ethereum": 0,
+            "reais": 0,
+            "bitcoin": 2,
+            "ethereum": 7,
             "ripple": 0
         },
         "extratos": []

@@ -1,8 +1,5 @@
-import json
 from funcionalidades.login import logar
-
-with open('banco.json', 'r', encoding='utf-8') as file:
-    banco = json.load(file)
+from funcionalidades.consultar_saldo import consultar_saldo
 
 # print(banco['moedas']['ethereum']['cotacao']) formato pra acessar dados do JSON
 # não sei que sentido faz ter um formato de lista, seria mais fácil com pontos
@@ -11,17 +8,28 @@ while True:
     # ---------------------------------------------------------------------------- #
     #                                     LOGIN                                    #
     # ---------------------------------------------------------------------------- #
-    logar()
+    if not logar():
+        break
 
     # ---------------------------------------------------------------------------- #
     #                                     MENU                                     #
     # ---------------------------------------------------------------------------- #
+    print('''
+1- consultar saldo
+2- consultar extrato
+3- depositar
+4- sacar
+5- comprar criptomoedas
+6- vender criptomoedas
+7- atualizar cotação
+8- sair
+''')
+
     entrada_opcao = input()
 
     match entrada_opcao:
         case '1':
-            print('consultar saldo')
-            break
+            consultar_saldo()
         case '2':
             print('consultar extrato')
             break

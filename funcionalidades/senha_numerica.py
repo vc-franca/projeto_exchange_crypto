@@ -1,0 +1,1 @@
+senha_numerica = (123456)
