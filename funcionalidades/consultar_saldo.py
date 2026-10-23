@@ -12,8 +12,8 @@ def consultar_saldo():
     Nome: {banco['investidor']['nome']}
     CPF: {banco['investidor']['cpf']}
     
-    Reais: {banco['investidor']['saldo']['reais']:.2f}
-    Bitcoin: {banco['investidor']['saldo']['bitcoin']:.2f}
-    Ethereum: {banco['investidor']['saldo']['ethereum']:.2f}
-    Ripple: {banco['investidor']['saldo']['ripple']:.2f}
+    Reais: {float(banco['investidor']['saldo']['reais']):.2f}
+    Bitcoin: {float(banco['investidor']['saldo']['bitcoin']):.2f}
+    Ethereum: {float(banco['investidor']['saldo']['ethereum']):.2f}
+    Ripple: {float(banco['investidor']['saldo']['ripple']):.2f}
     ''')
