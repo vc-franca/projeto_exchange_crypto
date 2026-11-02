@@ -1,5 +1,4 @@
 import json
-
 from banco import banco
 
 def depositar_reais():
