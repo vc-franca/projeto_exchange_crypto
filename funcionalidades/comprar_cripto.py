@@ -24,7 +24,7 @@ def comprar_cripto():
     if entrada_quantidade <= 0:
         return print('Quantidade inválida')
 
-    banco['investidor']['saldo'][entrada_moeda] += entrada_quantidade
+    banco['investidor']['saldo'][entrada_moeda] += entrada_quantidade - (entrada_quantidade * banco['moedas'][entrada_moeda]['taxa_compra'])
 
     with open('banco.json', 'w', encoding='utf-8') as file:
         json.dump(banco, file, indent=4, ensure_ascii=False)
