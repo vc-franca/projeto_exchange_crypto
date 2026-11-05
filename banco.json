@@ -9,7 +9,18 @@
             "ethereum": 7,
             "ripple": 0
         },
-        "extratos": []
+        "extratos": {
+            "data": "",
+            "operacao": "",
+            "valor": 0,
+            "moeda": "",
+            "cotacao": 0.0,
+            "taxa": 0.0,
+            "valor_reais": 0.0,
+            "valor_bitcoin": 0.0,
+            "valor_ethereum": 0.0,
+            "valor_ripple": 0.0
+        }
     },
     "moedas": {
         "bitcoin": {
