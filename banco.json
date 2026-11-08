@@ -10,16 +10,56 @@
             "ripple": 0
         },
         "extratos": {
-            "data": [""],
-            "operacao": [""],
-            "valor": [0],
-            "moeda": [""],
-            "cotacao": [0.0],
-            "taxa": [0.0],
-            "valor_reais": [0.0],
-            "valor_bitcoin": [0.0],
-            "valor_ethereum": [0.0],
-            "valor_ripple": [0.0]
+            "data": [
+                "",
+                "07/11/2026 22:33:33",
+                "07/11/2026 22:50:00"
+            ],
+            "operacao": [
+                "",
+                "+",
+                "+"
+            ],
+            "valor": [
+                0,
+                2.0,
+                7.0
+            ],
+            "moeda": [
+                "",
+                "bitcoin",
+                "ethereum"
+            ],
+            "cotacao": [
+                0.0,
+                412000.0,
+                12000.0
+            ],
+            "taxa": [
+                0.0,
+                0.02,
+                0.01
+            ],
+            "valor_reais": [
+                0.0,
+                824000.0,
+                84000.0
+            ],
+            "valor_bitcoin": [
+                0.0,
+                824000.0,
+                0.0
+            ],
+            "valor_ethereum": [
+                0.0,
+                0.0,
+                84000.0
+            ],
+            "valor_ripple": [
+                0.0,
+                0.0,
+                0.0
+            ]
         }
     },
     "moedas": {
