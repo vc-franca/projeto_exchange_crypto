@@ -6,6 +6,7 @@ from funcionalidades.sacar_reais import sacar_reais
 from funcionalidades.comprar_cripto import comprar_cripto
 from funcionalidades.vender_cripto import vender_cripto
 from funcionalidades.atualizar_cotacao import atualizar_cotacao
+from funcionalidades.consultar_extrato import consultar_extrato
 
 # print(banco['moedas']['ethereum']['cotacao']) formato pra acessar dados do JSON
 # não sei que sentido faz ter um formato de lista, seria mais fácil com pontos
@@ -39,8 +40,7 @@ def menu():
             case '1':
                 consultar_saldo()
             case '2':
-                print('consultar extrato')
-                break
+                consultar_extrato()
             case '3':
                 depositar_reais()
             case '4':
