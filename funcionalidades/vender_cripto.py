@@ -25,22 +25,23 @@ def vender_cripto():
     if entrada_quantidade <= 0:
         return print('Quantidade inválida')
 
-    banco['investidor']['saldo'][entrada_moeda] -= entrada_quantidade - (entrada_quantidade * banco['moedas'][entrada_moeda]['taxa_compra'])
-
+    taxa_venda = banco['moedas'][entrada_moeda]['taxa_venda']
+    banco['investidor']['saldo'][entrada_moeda] -= entrada_quantidade
+    valor_reais = entrada_quantidade * banco['moedas'][entrada_moeda]['cotacao']
+    valor_reais -= valor_reais * taxa_venda
+    banco['investidor']['saldo']['reais'] += valor_reais
     # ---------------------------------------------------------------------------- #
     #                               atualizar extrato                              #
     # ---------------------------------------------------------------------------- #
     extratos = banco['investidor']['extratos']
     cotacao = banco['moedas'][entrada_moeda]['cotacao']
     
-    valor_reais = entrada_quantidade * cotacao
-
     extratos['data'].append(datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
     extratos['operacao'].append('-')
     extratos['valor'].append(entrada_quantidade)
     extratos['moeda'].append(entrada_moeda)
     extratos['cotacao'].append(cotacao)
-    extratos['taxa'].append(banco['moedas'][entrada_moeda]['taxa_compra'])
+    extratos['taxa'].append(taxa_venda)
     extratos['valor_reais'].append(valor_reais)
     extratos['valor_bitcoin'].append(valor_reais if entrada_moeda == 'bitcoin' else 0.0)
     extratos['valor_ethereum'].append(valor_reais if entrada_moeda == 'ethereum' else 0.0)
