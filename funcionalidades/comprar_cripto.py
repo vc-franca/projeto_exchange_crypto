@@ -22,10 +22,12 @@ def comprar_cripto():
 
     entrada_quantidade = int(input(f'Digite a quantidade de {entrada_moeda} a ser comprada: '))
 
-    if entrada_quantidade <= 0:
+    if entrada_quantidade > banco['investidor']['saldo']['reais'] * banco['moedas'][entrada_moeda]['cotacao']:
         return print('Quantidade inválida')
 
     banco['investidor']['saldo'][entrada_moeda] += entrada_quantidade - (entrada_quantidade * banco['moedas'][entrada_moeda]['taxa_compra'])
+
+    banco['investidor']['saldo']['reais'] -= entrada_quantidade * banco['moedas'][entrada_moeda]['cotacao']
 
     # ---------------------------------------------------------------------------- #
     #                               atualizar extrato                              #
