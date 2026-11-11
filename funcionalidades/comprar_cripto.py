@@ -20,7 +20,7 @@ def comprar_cripto():
 
     entrada_moeda = input('Digite qual criptomoeda desejas comprar em letras minúsculas: ')
 
-    entrada_quantidade = int(input(f'Digite a quantidade de {entrada_moeda} a ser comprada: '))
+    entrada_quantidade = float(input(f'Digite a quantidade de {entrada_moeda} a ser comprada: '))
 
     if entrada_quantidade > banco['investidor']['saldo']['reais'] * banco['moedas'][entrada_moeda]['cotacao']:
         return print('Quantidade inválida')

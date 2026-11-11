@@ -20,7 +20,7 @@ def vender_cripto():
 
     entrada_moeda = input('Digite qual criptomoeda desejas vender em letras minúsculas: ')
 
-    entrada_quantidade = int(input(f'Digite a quantidade de {entrada_moeda} a ser vendida: '))
+    entrada_quantidade = float(input(f'Digite a quantidade de {entrada_moeda} a ser vendida: '))
 
     if entrada_quantidade <= 0:
         return print('Quantidade inválida')
